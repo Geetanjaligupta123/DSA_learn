@@ -1,0 +1,46 @@
+Today I have learn about recursion working from scratch...
+I have solved ques like print 1 to n using recursion
+I have solved n to 1 using recursion
+print even numbers from n to 1 
+here is the code:
+#include<iostream>
+using namespace std;
+void even(int n){
+    if(n==2){
+        cout<<n<<endl;
+        return;
+    }
+    cout<<n<<endl;
+    even(n-2);
+    // if(n == 0){
+    //     cout<<"happy bday\n";
+    //     return;
+    // }
+    // cout<<n<<" days left for bday\n";
+    // fun(n-1);
+}
+// void fun3(int n){
+//     cout<<n<<" days left for bday\n";
+// }
+// void fun2(int n){
+//     cout<<n<<" days left for bday\n";
+// }
+// void fun1(int n){
+//     cout<<n<<" days left for bday\n";
+// }
+// void fun0(int n){
+//     cout<<"happy bday\n";
+// }
+int main(){
+    int n=12;
+    even(n);
+    //iterative approach
+    // for(int i=n;i>0;i--){
+    //     cout<<i<<" days left for bday\n";
+    // }
+    // cout<<"happy bday\n";
+    // fun3(3);
+    // fun2(2);
+    // fun1(1);
+    // fun0(0);
+}
