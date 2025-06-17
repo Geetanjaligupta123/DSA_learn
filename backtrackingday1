@@ -1,0 +1,65 @@
+I have solves rat maze problem -1
+In this we have given an matrix and we have to find the possible direction paths to reach to the goal.now 
+we will find more than one directions path and insert into the ans matrix and return it..
+approach -- 
+start from 0,0
+we cant the move the placeswherethe matrix elemnt is zero
+from 0,0 either we top,left,rigth,bottom
+we take the visited matrix and pass it to 0 at all index , as i visite to the indexes tthen i mark 1 to that indexes;
+now the base caseb would be if(i==n-1&& j== n-1){
+return ans.push_back(path)}
+now mark visited[i][j] = 1;
+now we will see for every direction //up
+wewill check if(valid[i-1][j] && matrix[i][j]&& !visited[i][j])
+then we will path.push("U");
+we call recursively that is solve(ans,path,i-1,,j,n,visited,matrix);
+same we will do for every direction 
+//down
+if(valid[i+1][j] && matrix[i][j]&& !visited[i][j])
+then we will path.push("D");
+we call recursively that is solve(ans,path,i+1,,j,n,visited,matrix);
+//left
+if(valid[i][j-1] && matrix[i][j]&& !visited[i][j])
+then we will path.push("L");
+we call recursively that is solve(ans,path,i,,j-1,n,visited,matrix);
+//right
+if(valid[i][j+1] && matrix[i][j]&& !visited[i][j])
+then we will path.push("R");
+we call recursively that is solve(ans,path,i,,j+1,n,visited,matrix);
+
+// to avoid writing again and again for every directions you can write in hthis way
+
+declare row[] = {-1,1,0,0}
+int col[] = {0,0,-1,1}
+string dir = "UDLR"
+
+for(int k=0;k<4;k++){
+if(valid[i+row[k],j+col[k],n) && matrix[i+row[k] && !visited[i+row[k]][j+col[k]])
+{
+path.push_backa(dir[k]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
